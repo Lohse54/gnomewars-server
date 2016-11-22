@@ -8,6 +8,7 @@ using System.Net.Sockets;
 
 public class server_script : MonoBehaviour {
 
+    //Declaring variables
     Thread receiveThread;
 
     UdpClient listener;
@@ -17,6 +18,7 @@ public class server_script : MonoBehaviour {
 
     public static void Main()
     {
+        //initializing the script
         server_script receive = new server_script();
         receive.initialize();
 
@@ -39,21 +41,26 @@ public class server_script : MonoBehaviour {
 
     void initialize()
     {
+        //Setting port
         port = 1234;
 
+        //Instantiating a new thread and runs it
         receiveThread = new Thread(new ThreadStart(data));
         receiveThread.IsBackground = true;
         receiveThread.Start();
     }
 
+    //Receives the thread
     void data()
     {
+        //Receives data from new client
         listener = new UdpClient(port);
         while (true)
         {
 
             try
             {
+                //Receives from any IPAdress
                 IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
                 byte[] data = listener.Receive(ref anyIP);
 
