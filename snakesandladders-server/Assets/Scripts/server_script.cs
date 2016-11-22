@@ -12,18 +12,58 @@ public class server_script : MonoBehaviour {
 
     UdpClient listener;
 
+    int port;
+
+
     public static void Main()
     {
-        int port = 1234;
+        server_script receive = new server_script();
+        receive.initialize();
 
-        
+        string text = "";
+        while (true)
+        {
+            text = Console.ReadLine();
+        }
     }
 
-	void Start () {
-        
+	void Start ()
+    {
+        initialize();
     }
 	
-	void Update () {
+	void Update ()
+    {
 	
 	}
+
+    void initialize()
+    {
+        port = 1234;
+
+        receiveThread = new Thread(new ThreadStart(data));
+        receiveThread.IsBackground = true;
+        receiveThread.Start();
+    }
+
+    void data()
+    {
+        listener = new UdpClient(port);
+        while (true)
+        {
+
+            try
+            {
+                IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
+                byte[] data = listener.Receive(ref anyIP);
+
+                string text = Encoding.UTF8.GetString(data);
+
+            }
+            catch (Exception e)
+            {
+                print(e.ToString());
+            }
+        }
+    }
 }

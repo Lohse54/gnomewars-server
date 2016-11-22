@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snakesandladders-server.CSharp", "snakesandladders-server.CSharp.csproj", "{FEF78041-D4ED-B0E9-AE55-3F81252C69AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snakesandladders-server", "snakesandladders-server.csproj", "{4F13778E-5E10-48A2-65E7-FF41074C415D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FEF78041-D4ED-B0E9-AE55-3F81252C69AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEF78041-D4ED-B0E9-AE55-3F81252C69AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEF78041-D4ED-B0E9-AE55-3F81252C69AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FEF78041-D4ED-B0E9-AE55-3F81252C69AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F13778E-5E10-48A2-65E7-FF41074C415D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F13778E-5E10-48A2-65E7-FF41074C415D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F13778E-5E10-48A2-65E7-FF41074C415D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F13778E-5E10-48A2-65E7-FF41074C415D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
