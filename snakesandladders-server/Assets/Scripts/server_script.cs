@@ -38,7 +38,7 @@ public class server_script : MonoBehaviour {
     {
 	
 	}
-
+    //New test
     //Ellisa edit for test
 
     void initialize()
