@@ -39,6 +39,8 @@ public class server_script : MonoBehaviour {
 	
 	}
 
+    //Ellisa edit for test
+
     void initialize()
     {
         //Setting port
