@@ -38,8 +38,14 @@ public class server_script : MonoBehaviour {
     {
 	
 	}
+<<<<<<< HEAD
     //New test
     //Ellisa edit for test
+=======
+
+    //Ellis edit for test
+    //Ellisa edit for new test 
+>>>>>>> origin/master
 
     void initialize()
     {
