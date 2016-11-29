@@ -10,7 +10,6 @@ public class ServerScript : MonoBehaviour {
 
     public static void Main()
     {
-        //Initialize class
         NewClient addNewClient = new NewClient();
     }
 
@@ -26,13 +25,12 @@ public class ServerScript : MonoBehaviour {
     }
 }
 
-public class NewClient : MonoBehaviour
+public class NewClient
 {
     int clientNumber;
     int port = 1615;
     TcpListener listener;
 
-    //Starting new listener
     public NewClient()
     {
         listener = new TcpListener(IPAddress.Any, port);
@@ -40,7 +38,6 @@ public class NewClient : MonoBehaviour
         addClients();
     }
 
-    //Add new client in thread
     public void addClients()
     {
         while (true)
@@ -53,7 +50,6 @@ public class NewClient : MonoBehaviour
 
     public void communication(object obj)
     {
-        //This needs to be changed accordingly to what we need in terms of received data
         TcpClient client1 = (TcpClient)obj;
         StreamWriter writer = new StreamWriter(client1.GetStream(), Encoding.ASCII) { AutoFlush = true };
         StreamReader reader = new StreamReader(client1.GetStream(), Encoding.ASCII);
