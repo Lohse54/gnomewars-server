@@ -12,8 +12,8 @@ public class server_script : MonoBehaviour {
     Thread receiveThread;
 
     UdpClient listener;
-
     int port;
+
 
 
     public static void Main()
@@ -37,7 +37,20 @@ public class server_script : MonoBehaviour {
 	void Update ()
     {
 	
+
 	}
+
+
+    //This method will update the new postion of one player to the other plauers
+    void UpdatePlacement(Vector2D _playerPos)
+    {
+
+        //Will call method from the client and get info about position
+        if (Placement())
+        {
+
+        }
+    }
     
 
     void initialize()
