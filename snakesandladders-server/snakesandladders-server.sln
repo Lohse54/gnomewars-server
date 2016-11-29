@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snakesandladders-server", "snakesandladders-server.csproj", "{4F13778E-5E10-48A2-65E7-FF41074C415D}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{F21D1862-7641-0B1B-6073-53444C30FA42}") = "snakesandladders-server", "Assembly-CSharp.csproj", "{7804E698-EE97-60FF-AB28-37933E32A77F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4F13778E-5E10-48A2-65E7-FF41074C415D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F13778E-5E10-48A2-65E7-FF41074C415D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F13778E-5E10-48A2-65E7-FF41074C415D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F13778E-5E10-48A2-65E7-FF41074C415D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7804E698-EE97-60FF-AB28-37933E32A77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7804E698-EE97-60FF-AB28-37933E32A77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7804E698-EE97-60FF-AB28-37933E32A77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7804E698-EE97-60FF-AB28-37933E32A77F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
