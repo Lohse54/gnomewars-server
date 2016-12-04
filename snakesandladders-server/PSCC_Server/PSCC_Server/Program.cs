@@ -69,6 +69,31 @@ namespace PSCC_Server
                 active = true;
                 active1 = true;
 
+				//stuff 
+
+
+				// Checks if the client sends its own name to the server and changes, so that the turn is being passed to the next player
+				if (inputLine == players[0] && active == true && active1 == true)
+				{
+					playerNum = 1;
+					active = false;
+					active1 = true;
+					Console.WriteLine("Player2 turn");
+				}
+				if (inputLine == players[1] && active == false && active1 == true)
+				{
+					playerNum = 2;
+					active = true;
+					active1 = false;
+					Console.WriteLine("Player3 turn");
+				}
+				if (inputLine == players[2] && active == true && active1 == false)
+				{
+					playerNum = 0;
+					active = true;
+					active1 = true;
+					Console.WriteLine("Player1 turn");
+				}
 
             }
         }
