@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{AD63345A-58D3-48A5-B461-901BDD6B634E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PSCC_Server/Program.cs">
+    <Files>
+      <File FileName="PSCC_Server/Program.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PSCC__Server PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
