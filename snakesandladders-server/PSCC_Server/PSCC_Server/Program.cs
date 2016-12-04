@@ -9,7 +9,6 @@ using System.Threading;
 
 namespace PSCC_Server
 {
-
     public class TcpEchoServer
     {
         // initialising the class that instantiates a new client
@@ -64,7 +63,7 @@ namespace PSCC_Server
             while (true)
             {
                 //Assigns name to the client that has been accepted
-                string inputLine = "";
+                string inputLine = "", placements = "";
                 playerSelect += 1;
                 if (playerSelect > 2)
                 {
@@ -103,6 +102,9 @@ namespace PSCC_Server
                     // Checks if the client sends its own name to the server and changes, so that the turn is being passed to the next player
                     if (inputLine == players[0] && active == true && active1 == true)
                     {
+                        placements = reader.ReadLine();
+                        writer.WriteLine(placements);
+                        Console.WriteLine(placements + " placements");
                         playerNum = 1;
                         active = false;
                         active1 = true;
