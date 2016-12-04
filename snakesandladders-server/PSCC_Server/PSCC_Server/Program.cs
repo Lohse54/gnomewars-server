@@ -24,7 +24,6 @@ namespace PSCC_Server
     public class newClient
     {
         bool active, active1, yes = true;
-        List<TcpClient> listOfClients = new List<TcpClient>();
         string[] players = { "Player1", "Player2", "Player3" };
         int playerSelect = -1, playerNum = 0;
         int port = 1615;
@@ -46,7 +45,6 @@ namespace PSCC_Server
             while (true)
             {
                 TcpClient client = listener.AcceptTcpClient();
-                listOfClients.Add(client);
                 Thread newThread = new Thread(new ParameterizedThreadStart(communication));
                 newThread.Start(client);
             }
@@ -63,7 +61,7 @@ namespace PSCC_Server
             while (true)
             {
                 //Assigns name to the client that has been accepted
-                string inputLine = "", placements = "";
+                string inputLine = "";
                 playerSelect += 1;
                 if (playerSelect > 2)
                 {
@@ -102,9 +100,6 @@ namespace PSCC_Server
                     // Checks if the client sends its own name to the server and changes, so that the turn is being passed to the next player
                     if (inputLine == players[0] && active == true && active1 == true)
                     {
-                        placements = reader.ReadLine();
-                        writer.WriteLine(placements);
-                        Console.WriteLine(placements + " placements");
                         playerNum = 1;
                         active = false;
                         active1 = true;
@@ -140,7 +135,6 @@ namespace PSCC_Server
                     }
                     if (playerNum == 3)
                     {
-                        placements = reader.ReadLine();
                         writer.WriteLine(inputLine);
                     }
                 }

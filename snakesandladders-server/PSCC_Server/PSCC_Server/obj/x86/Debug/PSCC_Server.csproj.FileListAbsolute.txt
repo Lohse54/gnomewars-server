@@ -3,3 +3,8 @@ C:\Users\Elisabeth\Documents\GitHub\gnomewars-server\snakesandladders-server\PSC
 C:\Users\Elisabeth\Documents\GitHub\gnomewars-server\snakesandladders-server\PSCC_Server\PSCC_Server\bin\Debug\PSCC_Server.pdb
 C:\Users\Elisabeth\Documents\GitHub\gnomewars-server\snakesandladders-server\PSCC_Server\PSCC_Server\obj\x86\Debug\PSCC_Server.exe
 C:\Users\Elisabeth\Documents\GitHub\gnomewars-server\snakesandladders-server\PSCC_Server\PSCC_Server\obj\x86\Debug\PSCC_Server.pdb
+C:\Users\Lohse\Documents\GitHub\snakesandladders-server\snakesandladders-server\PSCC_Server\PSCC_Server\obj\x86\Debug\PSCC_Server.exe
+C:\Users\Lohse\Documents\GitHub\snakesandladders-server\snakesandladders-server\PSCC_Server\PSCC_Server\obj\x86\Debug\PSCC_Server.pdb
+C:\Users\Lohse\Documents\GitHub\snakesandladders-server\snakesandladders-server\PSCC_Server\PSCC_Server\bin\Debug\PSCC_Server.exe
+C:\Users\Lohse\Documents\GitHub\snakesandladders-server\snakesandladders-server\PSCC_Server\PSCC_Server\bin\Debug\PSCC_Server.pdb
+C:\Users\Lohse\Documents\GitHub\snakesandladders-server\snakesandladders-server\PSCC_Server\PSCC_Server\obj\x86\Debug\PSCC_Server.csprojResolveAssemblyReference.cache
