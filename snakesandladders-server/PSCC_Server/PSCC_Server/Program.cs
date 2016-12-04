@@ -10,19 +10,19 @@ using System.Threading;
 namespace PSCC_Server
 {
 
-	public class TcpEchoServer
-	{
-		// initialising the class that instantiates a new client
-		public static void Main()
-		{
-			Console.WriteLine("Starting echo server...");
-			newClient moreClients = new newClient();
-		}
-	}
+    public class TcpEchoServer
+    {
+        // initialising the class that instantiates a new client
+        public static void Main()
+        {
+            Console.WriteLine("Starting echo server...");
+            newClient moreClients = new newClient();
+        }
+    }
 
 
-	//Class newClient
-	public class newClient
+    //Class newClient
+    public class newClient
     {
         bool active, active1, yes = true;
         List<TcpClient> listOfClients = new List<TcpClient>();
@@ -101,51 +101,51 @@ namespace PSCC_Server
 
                     // Checks if the client sends its own name to the server and changes, so that the turn is being passed to the next player
                     if (inputLine == players[0] && active == true && active1 == true)
-				{
-					playerNum = 1;
-					active = false;
-					active1 = true;
-					Console.WriteLine("Player2 turn");
-				}
-				if (inputLine == players[1] && active == false && active1 == true)
-				{
-					playerNum = 2;
-					active = true;
-					active1 = false;
-					Console.WriteLine("Player3 turn");
-				}
-				if (inputLine == players[2] && active == true && active1 == false)
-				{
-					playerNum = 0;
-					active = true;
-					active1 = true;
-					Console.WriteLine("Player1 turn");
-				}
+                    {
+                        playerNum = 1;
+                        active = false;
+                        active1 = true;
+                        Console.WriteLine("Player2 turn");
+                    }
+                    if (inputLine == players[1] && active == false && active1 == true)
+                    {
+                        playerNum = 2;
+                        active = true;
+                        active1 = false;
+                        Console.WriteLine("Player3 turn");
+                    }
+                    if (inputLine == players[2] && active == true && active1 == false)
+                    {
+                        playerNum = 0;
+                        active = true;
+                        active1 = true;
+                        Console.WriteLine("Player1 turn");
+                    }
 
-                //If inputline is equal to statement a winning condition will be sent to clients
-                if (inputLine == "Player1 Won")
-                {
-                    playerNum = 3;
+                    //If inputline is equal to statement a winning condition will be sent to clients
+                    if (inputLine == "Player1 Won")
+                    {
+                        playerNum = 3;
+                    }
+                    if (inputLine == "Player2 Won")
+                    {
+                        playerNum = 3;
+                    }
+                    if (inputLine == "Player3 Won")
+                    {
+                        playerNum = 3;
+                    }
+                    if (playerNum == 3)
+                    {
+                        placements = reader.ReadLine();
+                        writer.WriteLine(inputLine);
+                    }
                 }
-                if (inputLine == "Player2 Won")
-                {
-                    playerNum = 3;
-                }
-                if (inputLine == "Player3 Won")
-                {
-                    playerNum = 3;
-                }
-                if (playerNum == 3)
-                {
-                    placements = reader.ReadLine();
-                    writer.WriteLine(inputLine);
-                }
+
+                Console.WriteLine("Server saw disconnect from client.");
             }
-
-            Console.WriteLine("Server saw disconnect from client.");
         }
     }
 }
-}
-            }
-        }
+
+
