@@ -34,5 +34,41 @@ namespace PSCC_Server
             }
         }
 
-    }
-}
+        public void communication(object obj)
+        {
+            // Writer and Reader assigned
+            TcpClient client1 = (TcpClient)obj;
+            StreamWriter writer = new StreamWriter(client1.GetStream(), Encoding.ASCII) { AutoFlush = true };
+            StreamReader reader = new StreamReader(client1.GetStream(), Encoding.ASCII);
+
+
+            while (true)
+            {
+                //Assigns name to the client that has been accepted
+                string inputLine = "";
+                playerSelect += 1;
+                if (playerSelect > 2)
+                {
+                    playerSelect = 0;
+                }
+                Console.WriteLine("Client : " + players[playerSelect] + " has been initialized");
+                writer.WriteLine(players[playerSelect]);
+                inputLine = reader.ReadLine();
+                writer.WriteLine(players[playerSelect]);
+                //Loop that wait until all clients have been accepted
+                while (yes)
+                {
+                    inputLine = reader.ReadLine();
+                    writer.WriteLine(players[playerSelect]);
+                    if (playerSelect > 1)
+                    {
+                        yes = false;
+                    }
+                }
+                playerNum = 0;
+                active = true;
+                active1 = true;
+
+
+            }
+        }
