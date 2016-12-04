@@ -86,11 +86,21 @@ namespace PSCC_Server
                 active = true;
                 active1 = true;
 
-				//stuff 
+                //Loops until game is over
+                while (inputLine != null)
+                {
+                    //Writes to clients until gameover statement has been initialized
+                    if (playerNum < 3)
+                    {
+                        writer.WriteLine(players[playerNum]);
+                    }
 
+                    inputLine = reader.ReadLine();
 
-				// Checks if the client sends its own name to the server and changes, so that the turn is being passed to the next player
-				if (inputLine == players[0] && active == true && active1 == true)
+                    //stuff 
+
+                    // Checks if the client sends its own name to the server and changes, so that the turn is being passed to the next player
+                    if (inputLine == players[0] && active == true && active1 == true)
 				{
 					playerNum = 1;
 					active = false;
