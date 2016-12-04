@@ -39,6 +39,8 @@ namespace PSCC_Server
             listener.Start();
             addClients();
         }
+
+
         //Accepts a new client and starts it on a thread
         public void addClients()
         {
@@ -97,7 +99,6 @@ namespace PSCC_Server
 
                     inputLine = reader.ReadLine();
 
-                    //stuff 
 
                     // Checks if the client sends its own name to the server and changes, so that the turn is being passed to the next player
                     if (inputLine == players[0] && active == true && active1 == true)
