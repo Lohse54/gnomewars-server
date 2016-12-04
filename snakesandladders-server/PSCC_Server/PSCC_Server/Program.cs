@@ -1,11 +1,28 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Sockets;
+using System.IO;
+using System.Text;
+using System.Threading;
 
 namespace PSCC_Server
 {
 
+	public class TcpEchoServer
+	{
+		// initialising the class that instantiates a new client
+		public static void Main()
+		{
+			Console.WriteLine("Starting echo server...");
+			newClient moreClients = new newClient();
+		}
+	}
 
-    //Class newClient
-    public class newClient
+
+	//Class newClient
+	public class newClient
     {
         bool active, active1, yes = true;
         List<TcpClient> listOfClients = new List<TcpClient>();
