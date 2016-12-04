@@ -22,4 +22,17 @@ namespace PSCC_Server
             listener.Start();
             addClients();
         }
+        //Accepts a new client and starts it on a thread
+        public void addClients()
+        {
+            while (true)
+            {
+                TcpClient client = listener.AcceptTcpClient();
+                listOfClients.Add(client);
+                Thread newThread = new Thread(new ParameterizedThreadStart(communication));
+                newThread.Start(client);
+            }
+        }
+
     }
+}
