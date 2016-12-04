@@ -95,5 +95,30 @@ namespace PSCC_Server
 					Console.WriteLine("Player1 turn");
 				}
 
+                //If inputline is equal to statement a winning condition will be sent to clients
+                if (inputLine == "Player1 Won")
+                {
+                    playerNum = 3;
+                }
+                if (inputLine == "Player2 Won")
+                {
+                    playerNum = 3;
+                }
+                if (inputLine == "Player3 Won")
+                {
+                    playerNum = 3;
+                }
+                if (playerNum == 3)
+                {
+                    placements = reader.ReadLine();
+                    writer.WriteLine(inputLine);
+                }
+            }
+
+            Console.WriteLine("Server saw disconnect from client.");
+        }
+    }
+}
+}
             }
         }
